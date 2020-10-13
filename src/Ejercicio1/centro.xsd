@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+
+<xsd:element name="datoscentro" type="DatosType"/>
+
+<xsd:complexType name="DatosType">
+  <xsd:sequence>
+   <xsd:element name="centro" type="centro"/>
+   <xsd:element name="profesores" type="profesores"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ 
+<xsd:complexType name="centro">
+  <xsd:sequence>
+   <xsd:element name="codigoCentro" type="xsd:string"/>
+   <xsd:element name="nombreCentro" type="xsd:string"/>
+   <xsd:element name="direccion" type="xsd:string"/>
+   <xsd:element name="director" type="director"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ 
+ <xsd:complexType name="director">
+  <xsd:sequence>
+   <xsd:element name="codigoDirector" type="xsd:string"/>
+   <xsd:element name="nombreDirector" type="xsd:string"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ 
+ <xsd:complexType name="profesores">
+  <xsd:sequence>
+   <xsd:element name="profesor" type="profesor"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ 
+ <xsd:complexType name="profesor">
+  <xsd:sequence>
+   <xsd:element name="codigoProfesor" type="xsd:string"/>
+   <xsd:element name="nombreProfesor" type="xsd:string"/>
+  </xsd:sequence>
+ </xsd:complexType>
+
+</xsd:schema>
